@@ -12,8 +12,7 @@ jobs:
       - name: Build
         run: |
           git clone https://github.com/dani-garcia/bitwarden_rs.git
-          cd bitwarden_rs
-          cargo build --features sqlite --release
+          cd bitwarden_rs && cargo build --features sqlite --release
       - name: Upload
         uses: actions/upload-artifact@v1
         with:
